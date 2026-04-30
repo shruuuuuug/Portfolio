@@ -75,6 +75,11 @@ a.button:hover {
   cursor: pointer;
 }
 
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
 
 /* Footer Styling */
 
