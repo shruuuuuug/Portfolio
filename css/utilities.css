@@ -77,8 +77,27 @@ a.button:hover {
 
 .project-links {
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
+  flex-direction: row;
+  gap: 12px;              /* space between buttons */
+  margin-top: 10px;       /* space above (closer to image) */
+  margin-bottom: 10px;    /* space below (closer to project details) */
+  align-items: center;
+}
+
+/* Fix button sizing inside project links */
+.project-links .button {
+  display: inline-flex;   /* prevents full-width behavior */
+  width: auto;            /* stops stretching */
+  padding: 10px 14px;     /* makes buttons visually balanced */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Optional: nicer hover effect */
+.project-links .button:hover {
+  transform: translateY(-2px);
+  transition: transform 0.15s ease;
 }
 
 /* Footer Styling */
