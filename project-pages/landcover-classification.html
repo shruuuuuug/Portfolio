@@ -26,7 +26,7 @@
      -->
      <link rel="icon" href="./assets/images/Wisco.png" />
 		<title>Oscar's Portfolio</title>
-    <meta name="description" content="A portfolio.">
+    <meta name="description" content="Oscar's portfolio.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="../css/layout.css">
@@ -50,7 +50,7 @@
         
           (this should be the same across all pages)
         -->
-        <a class="button" href="mailto:whitevans.eth@gmail.com">
+        <a class="button" href="mailto:oscarcheng1003@gmail.com">
           <span class="button-text">Contact Me</span>
         </a>
       </a>
@@ -73,7 +73,7 @@
           Satellite-based land cover classification and change detection using machine learning (2015–2024).
           </div>
         <image class="project-header-image" src="../assets/images/composites.png">
-              <span class="image-caption">Satellite Imagery Composites of Dane County in 2015 and 2024</span>
+              <span class="image-caption">Side-by-side RGB composites generated from HLS satellite imagery for 2015 and 2024. Contrast stretching was applied to improve visualization of land cover features and highlight changes in vegetation, urban development, and surface conditions over time.</span>
           <div class="project-links">
             <a class="button" href="https://github.com/shruuuuuug/Portfolio/blob/main/LandCoverClassificationProject.ipynb" target="_blank">
               <span class="button-text">View Notebook (GitHub)</span>
@@ -112,7 +112,7 @@
       <!-- IMAGE GALLERY -->
       <div id="project-gallery">
         <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
-        <div class="subheader-text">Image Gallery</div>
+        <div class="subheader-text">Figure Gallery</div>
         <div class="project-gallery-content">
             <!-- 
               TODO
@@ -139,44 +139,51 @@
             -->
             <div class="gallery-image-container">
               <img src="../assets/images/OAKappa.png" class="gallery-image">
-              <span class="image-caption">Comparing Overall Accuracy and Kappa Coefficient for Land Cover Classification</span>
+              <span class="image-caption">Bar chart comparing Overall Accuracy (OA) and Cohen's Kappa scores for the three machine learning classifiers. The figure summarizes overall model performance and agreement beyond random chance.</span>
             </div>
             <div class="gallery-image-container">
               <img src="../assets/images/FeatureImportance.png" class="gallery-image">
-              <span class="image-caption">Feature Importance for Land Cover Classification in Random Forest v. Decision Tree</span>
+              <span class="image-caption">Comparison of feature importance scores for spectral bands and indices used in the Random Forest and Decision Tree models. The figure highlights which variables contributed most strongly to land cover classification.</span>
             </div>
             <div class="gallery-image-container">
               <img src="../assets/images/confusion_matrix.png" class="gallery-image">
-              <span class="image-caption">Confusion Matrix for Land Cover Classification Using Three Different Learning Models</span>
+              <span class="image-caption">Normalized confusion matrices comparing the classification performance of the Naive Bayes, Decision Tree, and Random Forest models. Each matrix shows the proportion of correctly and incorrectly classified land cover classes, allowing evaluation of model accuracy and class-level performance. (B5 and MNDWI were the strongest features in both models)</span>
             </div>
             <div class="gallery-image-container">
               <img src="../assets/images/AgreementModel.png" class="gallery-image">
-              <span class="image-caption">Agreement Model to Emphasize Similarities Between Models</span>
+              <span class="image-caption">Spatial agreement map showing how many of the three classifiers produced the same prediction for each pixel in the 2024 dataset. Higher agreement indicates greater classification confidence, while lower agreement identifies areas of uncertainty.</span>
             </div>
             <div class="gallery-image-container">
               <img src="../assets/images/landcover.png" class="gallery-image">
-              <span class="image-caption">Land Cover Classification Results</span>
+              <span class="image-caption">Final land cover classification map for 2024 generated using the Decision Tree model. Distinct colors represent different land cover classes, providing a spatial overview of landscape composition across the study area.</span>
             </div>
             <div class="gallery-image-container">
               <img src="../assets/images/landcover_comparison.png" class="gallery-image">
-              <span class="image-caption">Dane County Land Cover Comparison Between 2015 and 2024</span>
+              <span class="image-caption">Bar chart comparing the total area of each land cover class between 2015 and 2024. The figure provides a quantitative summary of gains and losses in land cover categories across the study period.</span>
             </div>
             <div class="gallery-image-container">
               <img src="../assets/images/changeDetection.png" class="gallery-image">
-              <span class="image-caption">Change Detection Between 2015 and 2024</span>
+              <span class="image-caption">Change detection map showing spatial locations where land cover classes changed between 2015 and 2024. The figure highlights areas of transition and identifies regions with stable versus changing land cover patterns over time.</span>
+            </div>
+            <div class="gallery-image-container">
+              <a href="https://www.cityofmadison.com/dpced/housing-initiatives/2025-housing-snapshot-report/new-housing-construction">
+                <img src="../assets/images/housingchange.png" class="gallery-image">
+              </a>
+              <span class="image-caption">Map showing the distribution of housing unit density across Madison. Higher-density housing is concentrated near the central areas and major transportation corridors, corresponding with the increase in developed land shown in Figure 9 and emphasizing Madison's urbanization. (Map source credited to the original creator linked in the image reference.)</span>
             </div>
         </div>
       </div>
     </div>
 
     <!-- FOOTER -->
-    <div id="footer">
+     <div id="footer">
       <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/oscar-h-cheng/">
         <image src="../assets/icons/linkedin.png" class="footer-icon"/>
       </a>
-      
+       
       <a class="icon-link" href="mailto:oscarcheng1003@gmail.com">
         <image src="../assets/icons/mail.svg" class="footer-icon"/>
       </a>
+    </div>
 	</body>
 </html>

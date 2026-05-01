@@ -26,7 +26,7 @@
      -->
      <link rel="icon" href="./assets/images/Wisco.png" />
 		<title>Oscar's Portfolio</title>
-    <meta name="description" content="A portfolio.">
+    <meta name="description" content="Oscar's portfolio.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="../css/layout.css">
@@ -50,7 +50,7 @@
         
           (this should be the same across all pages)
         -->
-        <a class="button" href="mailto:whitevans.eth@gmail.com">
+        <a class="button" href="mailto:oscarcheng1003@gmail.com">
           <span class="button-text">Contact Me</span>
         </a>
       </a>
@@ -68,21 +68,12 @@
             - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
             - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
           -->
-          <div class="main-title">Land Cover Classification</div>
+          <div class="main-title">Balster's Lab</div>
           <div class="body-text">
-          Satellite-based land cover classification and change detection using machine learning (2015–2024).
-          </div>
-        <image class="project-header-image" src="../assets/images/composites.png">
-              <span class="image-caption">Satellite Imagery Composites of Dane County in 2015 and 2024</span>
-          <div class="project-links">
-            <a class="button" href="https://github.com/shruuuuuug/Portfolio/blob/main/LandCoverClassificationProject.ipynb" target="_blank">
-              <span class="button-text">View Notebook (GitHub)</span>
-            </a>
-          
-            <a class="button" href="https://colab.research.google.com/github/shruuuuuug/Portfolio/blob/main/LandCoverClassificationProject.ipynb" target="_blank">
-              <span class="button-text">Run in Colab</span>
-            </a>
-          </div>
+Analyzed soil properties through fieldwork and lab techniques, including bulk density and aggregate stability testing.          </div>
+        <image class="project-header-image" src="../assets/images/soil-pit.png">
+              <span class="image-caption">Analysis of Soil Horizons in a Confifer Forest</span>
+         
       </div>
 
       <!-- PROJECT DETAILS -->
@@ -93,20 +84,20 @@
         - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
       -->
       <div id="project-details">
-        <div class="subheader-text">Land Cover Classification & Change Detection (Madison, WI)</div>
+        <div class="subheader-text">Soil Ecology Research & Field/Lab Analysis (Madison, WI)</div>
         <div class="project-details-content">
   <div class="body-text">
-    This project focuses on remote sensing-based land cover classification and environmental change detection in Madison, Wisconsin. The objective was to analyze how land use changed between 2015 and 2024 while evaluating how machine learning model complexity affects classification performance. Satellite imagery from NASA's Harmonized Landsat Sentinel-2 (HLS) dataset was accessed through Google Earth Engine and processed into seasonal composite images for each year.
-  </div>
+My research focuses on understanding how environmental conditions and biological activity influence soil structure and ecosystem processes in forest environments. I work across both field and laboratory settings to study how factors such as winter snow cover and deer presence affect soil properties and long-term ecosystem function.  </div>
 
   <div class="body-text">
-    Spectral features, including vegetation, water, and urban indices, were engineered from the imagery and paired with labeled data from the National Land Cover Database (NLCD). Three supervised learning models (Gaussian Naive Bayes, Decision Tree, and Random Forest) were trained on 2015 data and evaluated using stratified cross-validation. Model performance was assessed using overall accuracy and Cohen's Kappa, highlighting trade-offs between simplicity, interpretability, and predictive power.
-  </div>
+In the field, I excavate soil pits and document soil horizon profiles to support long-term ecological monitoring and compare soil characteristics across sites. I also collect soil samples and help install experimental snow-cover structures designed to manipulate winter insulation. These setups allow us to study how snowpack affects soil temperature, moisture, and freeze–thaw cycles.  </div>
 
   <div class="body-text">
-    The best-performing model was applied to classify both 2015 and 2024 imagery, enabling direct comparison across time. A change detection analysis was then conducted to quantify land cover transitions, such as urban expansion and vegetation shifts, including estimates of affected area. This project demonstrates the integration of geospatial data processing, feature engineering, and machine learning to address real-world environmental monitoring challenges.
-  </div>
+In the lab, I process and analyze soil samples to measure key physical and chemical properties, including bulk density, compaction, nutrient levels, and organic matter content. I use methods such as loss-on-ignition, soil sieving, wet aggregate stability, and mean weight diameter analysis to evaluate soil structure and stability.  </div>
 </div>
+
+<div class="body-text">
+Additionally, I contribute to controlled field experiments examining how deer presence affects soil structure, nutrient cycling, and microbial activity through grazing pressure and disturbance. By integrating these datasets, the research helps clarify how interacting factors like herbivory and winter conditions shape forest soil dynamics and broader ecosystem processes over time.</div>
       </div>
 
       <!-- IMAGE GALLERY -->
@@ -138,61 +129,34 @@
                   - IMAGE_CAPTION: to the caption of the image
             -->
             <div class="gallery-image-container">
-              <img src="../assets/images/OAKappa.png" class="gallery-image">
-              <span class="image-caption">Comparing Overall Accuracy and Kappa Coefficient for Land Cover Classification</span>
+              <img src="../assets/images/menexttotree.jpg" class="gallery-image">
+              <span class="image-caption">Myself At Greenbay, Wisconsin Collecting Compaction Data</span>
             </div>
             <div class="gallery-image-container">
-              <img src="../assets/images/FeatureImportance.png" class="gallery-image">
-              <span class="image-caption">Feature Importance for Land Cover Classification in Random Forest v. Decision Tree</span>
+              <img src="../assets/images/groupdiggingpit.jpg" class="gallery-image">
+              <span class="image-caption">Excavating Soil Pits in Order to Analyze Soil Horizons</span>
             </div>
             <div class="gallery-image-container">
-              <img src="../assets/images/confusion_matrix.png" class="gallery-image">
-              <span class="image-caption">Confusion Matrix for Land Cover Classification Using Three Different Learning Models</span>
+                <video class="gallery-image" autoplay muted loop playsinline>
+                <source src="../assets/videos/forestpanning.mp4" type="video/mp4">
+                </video>
+              <span class="image-caption">Forest Panorama</span>
             </div>
             <div class="gallery-image-container">
-              <img src="../assets/images/AgreementModel.png" class="gallery-image">
-              <span class="image-caption">Agreement Model to Emphasize Similarities Between Models</span>
-            </div>
-            <div class="gallery-image-container">
-              <img src="../assets/images/landcover.png" class="gallery-image">
-              <span class="image-caption">Land Cover Classification Results</span>
-            </div>
-            <div class="gallery-image-container">
-              <img src="../assets/images/landcover_comparison.png" class="gallery-image">
-              <span class="image-caption">Dane County Land Cover Comparison Between 2015 and 2024</span>
-            </div>
-            <div class="gallery-image-container">
-              <img src="../assets/images/changeDetection.png" class="gallery-image">
-              <span class="image-caption">Change Detection Between 2015 and 2024</span>
+              <img src="../assets/images/soil-samples.png" class="gallery-image">
+              <span class="image-caption">Finished Product After Collecting Mean Weight Diameter Data For Sample Sites</span>
             </div>
         </div>
       </div>
     </div>
 
     <!-- FOOTER -->
-    <div id="footer">
-      <!-- 
-        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
-
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="../assets/icons/instagram.svg" class="footer-icon"/>
+     <div id="footer">
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/oscar-h-cheng/">
+        <image src="../assets/icons/linkedin.png" class="footer-icon"/>
       </a>
-      <!-- 
-        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="../assets/icons/twitter.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change the email after "mailto" to your contact email 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+       
+      <a class="icon-link" href="mailto:oscarcheng1003@gmail.com">
         <image src="../assets/icons/mail.svg" class="footer-icon"/>
       </a>
     </div>
