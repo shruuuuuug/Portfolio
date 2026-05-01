@@ -101,8 +101,6 @@ body {
       display: flex;
       flex-direction: column;
       gap: 34px;
-      height: 100%;                 /* add this */
-      justify-content: space-between; /* add this */
     }
 
     .project-card-text-container {
