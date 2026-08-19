@@ -1,0 +1,189 @@
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+     <link rel="icon" href="./assets/images/Wisco.png" />
+		<title>Oscar's Portfolio</title>
+    <meta name="description" content="Oscar's portfolio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <!-- 
+          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+
+          (this should be the same across all pages)
+         -->
+        <span class="nav-title">Oscar's Portfolio</span>
+        <!-- 
+          TODO - Change the email after 'mailto:' to your email address for contact 
+        
+          (this should be the same across all pages)
+        -->
+        <a class="button" href="mailto:oscarcheng1003@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <!-- 
+            TODO
+
+            - Change the 'main-title' text to the name of your project
+            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
+            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
+          -->
+          <div class="main-title">PACE Ocean Productivity and Algal Bloom Detection</div>
+          <div class="body-text">
+          Mapping chlorophyll-a from the PACE OCI sensor to explore global ocean productivity, compare algae products, and track temporal trends in phytoplankton.
+          </div>
+        <image class="project-header-image" src="../assets/images/ChlaConcGlobal.png">
+              <span class="image-caption">This global map from NASA's PACE OCI instrument shows ocean chlorophyll-a concentration for December 21, 2024, using a viridis color scale (dark purple = low, ~0.01 mg/m³; bright yellow = high, >10 mg/m³). High productivity is visible in coastal upwelling zones (west coasts of South America and southern Africa), high latitudes, and shelf/coastal waters, while the subtropical ocean gyres (e.g., the South Pacific and South Atlantic) appear as vast, nutrient-poor "ocean deserts" in deep purple.</span>
+          <div class="project-links">
+            <a class="button" href="https://github.com/shruuuuuug/Portfolio/blob/main/LandCoverClassificationProject.ipynb" target="_blank">
+              <span class="button-text">View Notebook (GitHub)</span>
+            </a>
+          
+            <a class="button" href="https://colab.research.google.com/github/shruuuuuug/Portfolio/blob/main/LandCoverClassificationProject.ipynb" target="_blank">
+              <span class="button-text">Run in Colab</span>
+            </a>
+          </div>
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <!-- 
+        TODO
+
+        - Change the 'subheader-text' to whatever header you want for project details
+        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
+      -->
+      <div id="project-details">
+        <div class="subheader-text">Land Cover Classification & Change Detection (Madison, WI)</div>
+        <div class="project-details-content">
+  <div class="body-text">
+    This project focuses on remote sensing-based land cover classification and environmental change detection in Madison, Wisconsin. The objective was to analyze how land use changed between 2015 and 2024 while evaluating how machine learning model complexity affects classification performance. Satellite imagery from NASA's Harmonized Landsat Sentinel-2 (HLS) dataset was accessed through Google Earth Engine and processed into seasonal composite images for each year.
+  </div>
+
+  <div class="body-text">
+    Spectral features, including vegetation, water, and urban indices, were engineered from the imagery and paired with labeled data from the National Land Cover Database (NLCD). Three supervised learning models (Gaussian Naive Bayes, Decision Tree, and Random Forest) were trained on 2015 data and evaluated using stratified cross-validation. Model performance was assessed using overall accuracy and Cohen's Kappa, highlighting trade-offs between simplicity, interpretability, and predictive power.
+  </div>
+
+  <div class="body-text">
+    The best-performing model was applied to classify both 2015 and 2024 imagery, enabling direct comparison across time. A change detection analysis was then conducted to quantify land cover transitions, such as urban expansion and vegetation shifts, including estimates of affected area. This project demonstrates the integration of geospatial data processing, feature engineering, and machine learning to address real-world environmental monitoring challenges.
+  </div>
+</div>
+      </div>
+
+      <!-- IMAGE GALLERY -->
+      <div id="project-gallery">
+        <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
+        <div class="subheader-text">Figure Gallery</div>
+        <div class="project-gallery-content">
+            <!-- 
+              TODO
+
+              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
+
+              Full Width Image:
+
+                <div class="gallery-image-container">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              Half Width Image: 
+
+                <div class="gallery-image-container half-width">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
+                  - IMAGE_NAME: the name of the image file in assets/images
+                  - IMAGE_CAPTION: to the caption of the image
+            -->
+            <div class="gallery-image-container">
+              <img src="../assets/images/OAKappa.png" class="gallery-image">
+              <span class="image-caption">Bar chart comparing Overall Accuracy (OA) and Cohen's Kappa scores for the three machine learning classifiers. The figure summarizes overall model performance and agreement beyond random chance.</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/FeatureImportance.png" class="gallery-image">
+              <span class="image-caption">Comparison of feature importance scores for spectral bands and indices used in the Random Forest and Decision Tree models. The figure highlights which variables contributed most strongly to land cover classification.</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/confusion_matrix.png" class="gallery-image">
+              <span class="image-caption">Normalized confusion matrices comparing the classification performance of the Naive Bayes, Decision Tree, and Random Forest models. Each matrix shows the proportion of correctly and incorrectly classified land cover classes, allowing evaluation of model accuracy and class-level performance. (B5 and MNDWI were the strongest features in both models)</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/AgreementModel.png" class="gallery-image">
+              <span class="image-caption">Spatial agreement map showing how many of the three classifiers produced the same prediction for each pixel in the 2024 dataset. Higher agreement indicates greater classification confidence, while lower agreement identifies areas of uncertainty.</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/landcover.png" class="gallery-image">
+              <span class="image-caption">Final land cover classification map for 2024 generated using the Decision Tree model. Distinct colors represent different land cover classes, providing a spatial overview of landscape composition across the study area.</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/landcover_comparison.png" class="gallery-image">
+              <span class="image-caption">Bar chart comparing the total area of each land cover class between 2015 and 2024. The figure provides a quantitative summary of gains and losses in land cover categories across the study period.</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/changeDetection.png" class="gallery-image">
+              <span class="image-caption">Change detection map showing spatial locations where land cover classes changed between 2015 and 2024. The figure highlights areas of transition and identifies regions with stable versus changing land cover patterns over time.</span>
+            </div>
+            <div class="gallery-image-container">
+              <a href="https://www.cityofmadison.com/dpced/housing-initiatives/2025-housing-snapshot-report/new-housing-construction">
+                <img src="../assets/images/housingchange.png" class="gallery-image">
+              </a>
+              <span class="image-caption">Map showing the distribution of housing unit density across Madison. Higher-density housing is concentrated near the central areas and major transportation corridors, corresponding with the increase in developed land shown in Figure 9 and emphasizing Madison's urbanization. (Map source credited to the original creator linked in the image reference.)</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+     <div id="footer">
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/oscar-h-cheng/">
+        <image src="../assets/icons/linkedin.png" class="footer-icon"/>
+      </a>
+       
+      <a class="icon-link" href="mailto:oscarcheng1003@gmail.com">
+        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+	</body>
+</html>
