@@ -96,15 +96,15 @@
         <div class="subheader-text">PACE Ocean Productivity and Algal Bloom Detection</div>
         <div class="project-details-content">
   <div class="body-text">
-    This project focuses on remote sensing-based land cover classification and environmental change detection in Madison, Wisconsin. The objective was to analyze how land use changed between 2015 and 2024 while evaluating how machine learning model complexity affects classification performance. Satellite imagery from NASA's Harmonized Landsat Sentinel-2 (HLS) dataset was accessed through Google Earth Engine and processed into seasonal composite images for each year.
+    This project focuses on satellite based ocean color analysis and chlorophyll-a monitoring across global and regional ocean systems using NASA's PACE OCI instrument. The objective was to characterize spatial and temporal patterns in ocean productivity while evaluating how consistent PACE measurements are against established satellite sensors. Level 3 mapped chlorophyll-a data was accessed through NASA Earthdata and processed into global and regional composites spanning March 2024 through April 2025.
   </div>
 
   <div class="body-text">
-    Spectral features, including vegetation, water, and urban indices, were engineered from the imagery and paired with labeled data from the National Land Cover Database (NLCD). Three supervised learning models (Gaussian Naive Bayes, Decision Tree, and Random Forest) were trained on 2015 data and evaluated using stratified cross-validation. Model performance was assessed using overall accuracy and Cohen's Kappa, highlighting trade-offs between simplicity, interpretability, and predictive power.
+    Regional subsets were extracted for five ecologically distinct systems, including the North Atlantic, equatorial Pacific, Southern Ocean, Bay of Bengal, and Gulf of Mexico, each shaped by a different physical or biological driver such as seasonal stratification, ENSO variability, or river nutrient runoff. Chlorophyll-a retrievals from PACE OCI were compared against MODIS-Aqua and Sentinel-3 OLCI, with sensor agreement evaluated using R-squared, RMSE, and bias, highlighting trade-offs in accuracy, spatial coverage, and consistency with long-running satellite records.
   </div>
 
   <div class="body-text">
-    The best-performing model was applied to classify both 2015 and 2024 imagery, enabling direct comparison across time. A change detection analysis was then conducted to quantify land cover transitions, such as urban expansion and vegetation shifts, including estimates of affected area. This project demonstrates the integration of geospatial data processing, feature engineering, and machine learning to address real-world environmental monitoring challenges.
+    PACE OCI data was then used to track monthly productivity across all five regions, enabling direct comparison between peak and off-peak bloom months. A temporal analysis was conducted to quantify seasonal bloom dynamics, such as spring stratification blooms and monsoon-driven productivity, including estimates of regional mean and 95th-percentile chlorophyll-a concentrations. This project demonstrates the integration of satellite data processing, statistical analysis, and multi-sensor validation to address real-world ocean monitoring challenges.
   </div>
 </div>
       </div>
