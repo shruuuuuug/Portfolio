@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <link rel="icon" href="../assets/images/Wisco.png" />
+		<title>Oscar's Portfolio</title>
+    <meta name="description" content="Oscar's portfolio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <span class="nav-title">Oscar's Portfolio</span>
+        <a class="button" href="mailto:oscarcheng1003@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <div class="main-title">Forecasting Harmful Algal Blooms</div>
+          <div class="body-text">
+          Combining NASA's PACE satellite, Sentinel-2 imagery, and weather data in a machine learning model that warns of cyanobacteria blooms in lakes 1, 3, and 7 days ahead.
+          </div>
+        <image class="project-header-image" src="../assets/images/pace_bloom_index_lakes.png">
+              <span class="image-caption">The PACE Cyanobacteria Index at six bloom-prone lakes across the 2024, 2025, and 2026 bloom seasons, built from 2,010 cloud-free daily satellite views. Dots are single clear days and lines are 14-day rolling medians. Utah Lake and Lake Winnebago build to strong late summer peaks each year, which is the seasonal pattern the forecast model learns from.</span>
+          <div class="project-links">
+            <a class="button" href="https://github.com/shruuuuuug/Portfolio/blob/main/Forecasting_Bloom_Project.ipynb" target="_blank">
+              <span class="button-text">View Notebook (GitHub)</span>
+            </a>
+          </div>
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <div id="project-details">
+        <div class="subheader-text">Short-Term Bloom Forecasting with PACE and Machine Learning</div>
+        <div class="project-details-content">
+  <div class="body-text">
+    This project explores whether satellite data can forecast harmful algal blooms in lakes before they happen. Cyanobacteria blooms can produce toxins that close beaches and threaten drinking water supplies, but most monitoring only confirms a bloom once it is already there. The aim was to build a short-term forecast of bloom risk at specific lake sites 1, 3, and 7 days ahead, using NASA's PACE satellite together with Sentinel-2 imagery and weather data, so that warnings could be issued before conditions turn unsafe.
+  </div>
+
+  <div class="body-text">
+    I first reproduced CyFi, the open-source model from NASA's Tick Tick Bloom competition, using 15,169 field-measured cyanobacteria samples from US lakes (the CAML dataset). On 3,034 held-out samples it explained 58% of the variation in cell density, but 29% of samples had no clear satellite image to predict from. To close that gap, I added NASA's PACE OCI sensor, which observes nearly every day and measures a full hyperspectral spectrum. I wrote a feature extraction module that turns PACE reflectance into pigment indicators, including a Cyanobacteria Index, NDCI, a 709/620 nm band ratio, and a 620 nm phycocyanin absorption depth. I then paired these with Sentinel-2 imagery and daily NASA POWER weather (temperature, wind, rain, and sunlight) for 13 open-water sites across six bloom-prone lakes: Lake Erie, Saginaw Bay, Green Bay, Lake Winnebago, Lake Okeechobee, and Utah Lake.
+  </div>
+
+  <div class="body-text">
+    Each forecast only uses data from before its cutoff date, so the model never sees the future. I trained LightGBM models to predict the PACE bloom index and the chance of a bloom day 1, 3, and 7 days ahead, and scored them with week-grouped cross-validation against a persistence baseline that assumes conditions stay the same. At 7 days ahead, the model explained 72% of the variation in the bloom index compared with 53% for persistence, and ranked bloom days with an AUC of 0.94 compared with 0.90. Trained only on 2024 and 2025, it still reached an AUC of 0.93 on the unseen 2026 season. The forecast targets the bloom index PACE observes rather than measured toxin levels, and skill drops on lakes the model was not trained on, so the next step is adding more lakes and field validation. All work was done in Python using earthaccess, pandas, scikit-learn, LightGBM, and matplotlib.
+  </div>
+</div>
+      </div>
+
+      <!-- IMAGE GALLERY -->
+      <div id="project-gallery">
+        <div class="subheader-text">Figure Gallery</div>
+        <div class="project-gallery-content">
+            <div class="gallery-image-container">
+              <img src="../assets/images/cyfi_baseline.png" class="gallery-image">
+              <span class="image-caption">Reproducing NASA's Tick Tick Bloom model (CyFi) on 3,034 held-out field samples. Left: predicted versus measured cyanobacteria density on a log scale, with the dashed line marking a perfect prediction. Right: how often each severity class was predicted correctly. The model explained 58% of the variation in density and placed 67% of samples in the correct severity class.</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/forecast_skill_lead_time.png" class="gallery-image">
+              <span class="image-caption">Forecast skill 1, 3, and 7 days ahead. Left: how closely the forecast bloom index matched what PACE later observed (R²). Right: how well each model ranked bloom days above normal days (AUC). The satellite models (solid lines) stay well above the persistence baseline (dotted line), and the gap grows with lead time, reaching an R² of 0.72 versus 0.53 at 7 days.</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/forecast_vs_observed.png" class="gallery-image">
+              <span class="image-caption">3-day forecasts (orange) compared with what PACE observed (blue dots) at Green Bay, Lake Erie, and Utah Lake over three bloom seasons. Each forecast was made by a model that never saw that week of data. The dashed grey line marks the bloom threshold, and the forecasts track both the rise and the decline of each season's blooms.</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/forecast_feature_importance.png" class="gallery-image">
+              <span class="image-caption">The inputs the 7-day forecast model relied on most. The top two come from different satellites: PACE's two-week average bloom index and Sentinel-2's green to blue ratio, a classic sign of algae. PACE adds daily bloom history while Sentinel-2 adds 10 to 20 m detail, which is why the combined model beat either satellite alone.</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/bloom_risk_levels.png" class="gallery-image">
+              <span class="image-caption">How well the bloom warnings matched what actually happened. Each forecast was labeled Low, Moderate, or High risk, and the bars show how often each label was followed by a bloom day across 1,467 forecasts at 13 lake sites. High risk forecasts were followed by a bloom 83 to 87% of the time, compared with only 6 to 7% for Low risk.</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+     <div id="footer">
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/oscar-h-cheng/">
+        <image src="../assets/icons/linkedin.png" class="footer-icon"/>
+      </a>
+
+      <a class="icon-link" href="mailto:oscarcheng1003@gmail.com">
+        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+	</body>
+</html>
